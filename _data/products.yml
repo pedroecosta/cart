@@ -20,19 +20,19 @@
       description: Antifúngico 100% Natural a base de extractos de Cola de caballo y de Ortiga Verde, que aporta vitalidad y fuerza a las plantas.
 - category: "LED"
   products:
-    - image: /assets/img/led.png
+    - image: cart/assets/img/led.png
       label: Producto
       price: 500,00
       title: LED Grow Light 300W
       slug: led-grow-light-300w
       description: High-efficiency LED grow light for indoor plants.
-    - image: /assets/img/led.png
+    - image: cart/assets/img/led.png
       label: Producto
       price: 700,00
       title: LED Grow Light 500W
       slug: led-grow-light-500w
       description: Powerful 500W LED grow light for optimal plant growth.
-    - image: /assets/img/led.png
+    - image: cart/assets/img/led.png
       label: Producto
       price: 700,00
       title: LED Grow Light 500W
