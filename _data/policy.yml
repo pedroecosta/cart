@@ -1,0 +1,28 @@
+privacy_policy:
+  title: Política de Privacidad
+  introduction: "En **Gorilla's Grow**, valoramos la privacidad y protección de los datos personales de nuestros usuarios. Por esta razón, hemos desarrollado esta política de privacidad para explicar cómo recopilamos, usamos, divulgamos y protegemos los datos personales que obtenemos de nuestros usuarios."
+  sections:
+    - title: Recopilación de Datos Personales
+      content: "En nuestro sitio web, solo recopilamos los datos personales que nuestros usuarios proporcionan voluntariamente al registrarse en nuestro sitio, realizar compras de nuestros productos, descargar nuestros materiales gratuitos o contactarnos para obtener información o asistencia técnica. Los datos personales que recopilamos incluyen:"
+      items:
+        - "Nombre y apellido"
+        - "Dirección de correo electrónico"
+        - "Dirección IP"
+        - "Nombre de usuario"
+    - title: Uso de Datos Personales
+      content: "La información que recopilamos se utiliza para los siguientes fines:"
+      items:
+        - "Personalizar la experiencia de nuestros usuarios en nuestro sitio web"
+        - "Procesar transacciones de compra de nuestros productos"
+        - "Mejorar nuestro sitio web y servicios"
+        - "Proporcionar soporte técnico y servicio al cliente a nuestros usuarios"
+    - title: Divulgación de Datos Personales
+      content: "**Gorilla's Grow** no compartirá, venderá, alquilará ni intercambiará datos personales con terceros, excepto en los siguientes casos:"
+      items:
+        - "Si los datos personales son necesarios para cumplir con las leyes y regulaciones aplicables"
+        - "Si los datos personales son necesarios para proteger los derechos y propiedades de Gorilla's Grow o nuestros usuarios"
+        - "Si los datos personales son necesarios para proporcionar servicios a nuestros usuarios, como servicios de pago o servicios de envío"
+    - title: Seguridad de Datos Personales
+      content: "**Gorilla's Grow** tomará medidas razonables y apropiadas para proteger los datos personales de nuestros usuarios contra el acceso no autorizado, alteración, divulgación o destrucción. Utilizamos medidas técnicas y administrativas apropiadas para proteger los datos personales que recopilamos y procesamos."
+    - title: Cambios en la Política de Privacidad
+      content: "**Gorilla's Grow** se reserva el derecho de actualizar esta política de privacidad en cualquier momento y sin previo aviso. Por lo tanto, recomendamos que revise periódicamente esta política de privacidad para mantenerse informado sobre cualquier cambio. Si continúa utilizando nuestro sitio web después de que se hayan realizado cambios en esta política de privacidad, se considerará que acepta dichos cambios."

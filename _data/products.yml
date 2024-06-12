@@ -1,0 +1,40 @@
+- category: "Growshop"
+  products:
+    - image: //acdn.mitiendanube.com/stores/002/858/188/products/photoroom-20230528_1658121-050d7d06d5ed5e909816853054931867-1024-1024.webp
+      label: Producto
+      price: 2603,00
+      title: NAMASTE BIO NEEM 30ML - BION3
+      slug: namaste-bio-neem-30ml-bion3
+      description: Es un aceite 100% Natural proveniente de India, que tiene la función de prevenir y controlar primeros estadios de infección de varios tipos de plagas y hongo.
+    - image: //acdn.mitiendanube.com/stores/002/858/188/products/photoroom-20230528_1655241-f0f33ac1314c17fb4f16853054878001-1024-1024.webp
+      label: Producto
+      price: 3367,00
+      title: NAMASTE BIO PROTECT 100ML - BIOP10
+      slug: namaste-bio-protect-100ml-biop10
+      description: Antifúngico 100% Natural a base de extractos de Cola de caballo y de Ortiga Verde, que aporta vitalidad y fuerza a las plantas.
+    - image: //acdn.mitiendanube.com/stores/002/858/188/products/photoroom-20230528_1655241-f0f33ac1314c17fb4f16853054878001-1024-1024.webp
+      label: Producto
+      price: 3367,00
+      title: NAMASTE BIO PROTECT 100ML - BIOP10
+      slug: namaste-bio-protect-100ml-biop10
+      description: Antifúngico 100% Natural a base de extractos de Cola de caballo y de Ortiga Verde, que aporta vitalidad y fuerza a las plantas.
+- category: "LED"
+  products:
+    - image: /assets/img/led.png
+      label: Producto
+      price: 500,00
+      title: LED Grow Light 300W
+      slug: led-grow-light-300w
+      description: High-efficiency LED grow light for indoor plants.
+    - image: /assets/img/led.png
+      label: Producto
+      price: 700,00
+      title: LED Grow Light 500W
+      slug: led-grow-light-500w
+      description: Powerful 500W LED grow light for optimal plant growth.
+    - image: /assets/img/led.png
+      label: Producto
+      price: 700,00
+      title: LED Grow Light 500W
+      slug: led-grow-light-500w
+      description: Powerful 500W LED grow light for optimal plant growth.

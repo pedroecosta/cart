@@ -1,0 +1,16 @@
+warranty_terms:
+  title: Términos de Garantía
+  introduction: "Estimado Cliente,\n\nEn **Gorilla's Grow**, nuestro compromiso es su satisfacción. Nos enorgullecemos de ofrecer productos de alta calidad para el cultivo, elaborados con dedicación y experiencia."
+  content: |
+    Entendemos la importancia de la confianza en nuestro entorno. Para reforzar esa confianza, nos complace ofrecerle las siguientes garantías:
+  guarantees:
+    - title: Garantía de Satisfacción del 100%
+      description: "Si encuentra que nuestros productos no cumplen con sus expectativas, ofrecemos un reembolso completo dentro de los 30 días posteriores a la fecha de su compra."
+    - title: Garantía de Calidad
+      description: "Nuestra promesa es una experiencia sin problemas con nuestros productos. Cualquier inconveniente, y estamos en ello, asegurándonos de que obtenga lo mejor."
+    - title: Garantía de Privacidad y Seguridad
+      description: "Su privacidad es nuestra prioridad. Si hay alguna violación o uso indebido de sus datos de pago, tenga la seguridad de que le reembolsaremos por completo."
+    - title: Garantía de Entrega
+      description: "Una vez que su pago se haya procesado, prometemos una entrega rápida de nuestros productos a la dirección proporcionada. Su cultivo no debe esperar."
+  contact: "Esperamos que nuestras garantías subrayen nuestro compromiso con usted. Si tiene alguna consulta, no dude en comunicarse con nuestro servicio de atención al cliente en [support@greengrow.com](mailto:support@greengrow.com) o conéctese con nosotros en WhatsApp al +54 11 1234 5678."
+  closing: "Saludos cordiales,\n**Gorilla's Grow.**"

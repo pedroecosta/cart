@@ -1,0 +1,42 @@
+---
+layout: default
+---
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/styles/contact.css">
+<section class="about-us-section">
+    <div class="about-us-text">
+        <h2 style="margin-bottom: 2vh;">{{ site.data.contact.title }}</h2>
+        <p>{{ site.data.contact.introduction }}</p>
+    </div>
+</section>
+<div class="contact-section reveal-left">
+    <!-- Contact Details -->
+    <div class="contact-details">
+        {% for detail in site.data.contact.details %}
+        <div class="detail">
+            <i class="{{ detail.icon }}"></i>
+            <p>{{ detail.text }}</p>
+        </div>
+        {% endfor %}
+    </div>
+
+    <!-- Contact Form -->
+    <div class="contact-form">
+        <form action="{{ site.data.contact.form.action }}" method="POST">
+            {% for field in site.data.contact.form.fields %}
+            {% if field.type == "textarea" %}
+            <textarea name="{{ field.name }}" placeholder="{{ field.placeholder }}" required="{{ field.required }}"></textarea>
+            {% else %}
+            <input type="{{ field.type }}" name="{{ field.name }}" placeholder="{{ field.placeholder }}" required="{{ field.required }}">
+            {% endif %}
+            {% endfor %}
+            <button type="submit" style="background-color: var(--greengrow-background);">
+                {{ site.data.contact.form.submit_text }}
+            </button>
+        </form>
+    </div>
+
+    <!-- Google Maps -->
+    <div class="map">
+        <iframe src="{{ site.data.contact.map.src }}" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+    </div>
+</div>

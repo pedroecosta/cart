@@ -1,0 +1,66 @@
+.banner {
+    background-color: var(--greengrow-verde-500);
+    color: var(--greengrow-amarillo-50);
+    text-align: left;
+    padding: 50px;
+    position: relative;
+    height: 80vh;
+}
+
+.typing-title {
+    margin-bottom: 4vh;
+    font-size: 3rem;
+    color: var(--greengrow-verde-900);
+    position: relative;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.typing {
+    border-right: 0.3em solid var(--greengrow-amarillo-700);
+    white-space: nowrap;
+    overflow: hidden;
+    letter-spacing: 0.15em;
+    animation: blink-caret 1s step-end infinite;
+}
+
+.slogan {
+    color: var(--greengrow-color);
+    margin: 20px 0;
+    font-weight: bold;
+}
+
+.cta {
+    font-size: 3vh;
+    margin: 5vh 0;
+    font-weight: lighter;
+    color: var(--greengrow-amarillo-50);
+}
+
+.get-started-btn {
+    display: inline-block;
+    padding: 10px 50px;
+    background-color: transparent;
+    color: var(--greengrow-amarillo-50);
+    text-decoration: none;
+    border: 2px solid var(--greengrow-amarillo-50);
+    border-radius: 50px;
+    margin-top: -20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.get-started-btn:hover {
+    background-color: var(--greengrow-amarillo-100);
+    color: var(--greengrow-verde-900);
+    border: 0px;
+}
+
+@keyframes blink-caret {
+    from,
+    to {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: var(--greengrow-amarillo-700);
+    }
+}

@@ -1,0 +1,36 @@
+<style>
+    @media screen and (max-width: 768px){
+        .products-cards-home{
+            grid-template-columns: repeat(1, 1fr) !important; 
+            margin-bottom: 5vh !important;
+        }
+    }
+</style>
+<section class="products-section" id="popular-products">
+    <div class="title-container">
+        <h2 class="title">PRODUCTOS</h2>
+        <hr class="divider">
+        <h2 class="subtitle">PRODUCTOS POPULARES</h2>
+    </div>
+
+    <div class="product-cards products-cards-home">
+        {% assign count = 0 %}
+        {% for category in site.data.products %}
+            {% for product in category.products %}
+                {% if count < 3 %}
+                    <div class="product-card" data-title="{{ product.title }}">
+                        <img src="{{ product.image }}" alt="{{ product.title }}" class="product-image">
+                        <span class="product-label">{{ product.label }}</span>
+                        <span class="product-price">{{ product.price }}</span>
+                        <h5 class="product-title"><a href="{{ site.baseurl }}/products/{{ product.slug }}">{{ product.title }}</a></h5>
+                        <p class="product-desc">{{ product.description }}</p>
+                        <hr class="product-divider">
+                        <button class="buy-product">Buy Now</button>
+
+                    </div>
+                    {% assign count = count | plus: 1 %}
+                {% endif %}
+            {% endfor %}
+        {% endfor %}
+    </div>
+</section>

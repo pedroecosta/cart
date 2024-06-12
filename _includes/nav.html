@@ -1,0 +1,137 @@
+<style>
+    .navbar-search {
+        display: flex;
+        align-items: center;
+        position: relative;
+        margin-left: auto;
+        border-radius: 25px;
+        background-color: #f8f9fa;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar-search input {
+        border: none;
+        padding-left: 40px; /* Espacio para el icono */
+        width: 200px;
+        height: 20px;
+        border-radius: 25px;
+        transition: width 0.4s ease-in-out;
+    }
+
+    .navbar-search input:focus {
+        width: 250px;
+        outline: none;
+    }
+
+    .navbar-search .fa-search {
+        position: absolute;
+        left: 10px;
+        color: #6c757d;
+    }
+
+    .navbar-search input::placeholder {
+        color: #6c757d;
+        opacity: 1; /* Mostrar placeholder con opacidad normal */
+    }
+
+    .navbar-search input:focus::placeholder {
+        color: transparent; /* Esconder placeholder en foco */
+    }
+
+    .container {
+        position: relative; /* Asegura que el contenedor tenga posición relativa */
+    }
+
+    .cart-count {
+        background-color: red;
+        color: white;
+        font-size: 12px;
+        padding: 2px 5px;
+        border-radius: 50%;
+        position: absolute;
+        bottom: 50px;
+        right: 50px;
+        display: inline-block; /* Asegura que el elemento se muestre */
+        z-index: 1000; /* Aumenta el z-index para asegurar visibilidad */
+    }
+
+    .navbar-push {
+        transition: transform 0.3s ease-in-out;
+        transform: translateY(-100%);
+    }
+
+    @media  (max-width: 768px){
+        .navbar-search{
+            margin-left: 12% !important;
+            background-color: transparent;
+            box-shadow: none;
+        }
+
+        .cart-count{
+            bottom: 10px;
+            right: 10px;
+            position: relative;
+        }
+
+        
+    }
+
+    
+
+</style>
+
+<nav>
+    <div class="container">
+        <img src="{{ site.baseurl }}/assets/img/logowithe500.png" alt="{{ site.title }}" class="logo-img">
+        <a href="#" id="brand-logo">{{ site.data.navbar.brand_logo }}</a>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="navbar-menu navbar-items">
+            <li><a href="{{ site.baseurl }}/">{{ site.data.navbar.home }}</a></li>
+            <li><a href="{{ site.baseurl }}/products">{{ site.data.navbar.products }}</a></li>
+            <li><a href="{{ site.baseurl }}/about">{{ site.data.navbar.about }}</a></li>
+            <li><a href="{{ site.baseurl }}/contact">{{ site.data.navbar.contact }}</a></li>
+            <form id="searchForm" action="{{ site.baseurl }}/products" method="GET">
+                <li class="navbar-search">
+                    <i class="fas fa-search"></i>
+                    <input type="text" name="query" id="search" class="form-control" placeholder="{{ site.data.navbar.search_placeholder }}">
+                </li>
+            </form>
+            <li>
+                <a href="javascript:void(0)" onclick="toggleCart()">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span id="cart-count" class="cart-count"></span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+</nav>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var searchInput = document.getElementById('search');
+        searchInput.focus();
+    
+        var timeout = null; // Variable para almacenar el temporizador
+    
+        // Función para manejar la búsqueda
+        function handleSearch() {
+            var searchQuery = searchInput.value;
+            if (searchQuery.length > 0) { // Asegúrate de que la consulta no esté vacía
+                window.location.href = '{{ site.baseurl }}/products?query=' + encodeURIComponent(searchQuery);
+            }
+        }
+    
+        // Función para manejar la entrada del usuario
+        function handleInput() {
+            clearTimeout(timeout); // Cancela el temporizador anterior
+            timeout = setTimeout(handleSearch, 300); // Establece un nuevo temporizador
+        }
+    
+        // Escuchar el evento de entrada para iniciar el temporizador
+        searchInput.addEventListener('input', handleInput);
+    });
+    </script>

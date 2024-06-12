@@ -1,0 +1,61 @@
+<div id="cartMenu" class="cart-menu">
+    <div class="cart-menu-content">
+        <span class="close-cart" onclick="toggleCart()">&times;</span>
+        <h2>Tu Carrito</h2>
+        <div id="cartItems">
+            <!-- Aquí se agregarán los items del carrito dinámicamente -->
+        </div>
+        <div class="cart-total">
+            <p>Total: $<span id="cartTotal">0</span></p>
+        </div>
+        <button class="pay-button" onclick="pay()">PAGAR</button>
+        <button class="whatsapp-button" onclick="sendToWhatsApp()">
+            <i class="fab fa-whatsapp" style="font-size: 24px;"></i>
+        </button>
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+    let preFilledMessage = localStorage.getItem("preFilledMessage");
+    if (preFilledMessage) {
+        document.querySelector("textarea[name='message']").value = preFilledMessage;
+        localStorage.removeItem("preFilledMessage"); // Limpiar el mensaje para evitar rellenar el formulario múltiples veces
+    }
+});
+function pay() {
+    // Recuperar los detalles del carrito directamente del almacenamiento local
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    let cartDetails = "Lista de productos:\n";
+
+    cart.forEach((product, index) => {
+        cartDetails += `${index + 1}. Producto: ${product.title}, Cantidad: ${product.quantity}, Precio: $${parseFloat(product.price).toFixed(2)}\n`;
+    });
+
+    // Mensaje predefinido para el formulario de contacto
+    let message = `Hola, vi tu página y quiero comprar todo esto:\n${cartDetails}\nPor favor, contáctame para finalizar la compra.`;
+
+    // Guardar el mensaje en el almacenamiento local
+    localStorage.setItem("preFilledMessage", message);
+
+    // Redirigir al usuario a la página de contacto
+    window.location.href = "{{ site.baseurl }}/contact.html";
+}
+
+
+function sendToWhatsApp() {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    let cartDetails = "Lista de productos:\n";
+
+    cart.forEach((product, index) => {
+        cartDetails += `${index + 1}. Producto: ${product.title}, Cantidad: ${product.quantity}, Precio: $${parseFloat(product.price).toFixed(2)}\n`;
+    });
+
+    let message = `Hola, vi tu página y quiero comprar todo esto:\n${cartDetails}\nPor favor, contáctame para finalizar la compra.`;
+    let whatsappUrl = `https://wa.me/?text=${encodeURIComponent(message)}`;
+
+    window.open(whatsappUrl, '_blank');
+}
+
+</script>
+

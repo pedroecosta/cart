@@ -1,0 +1,164 @@
+.buy-product {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 1.2vh 6vh; /* Más padding para hacer el botón un poco más grande */
+    background-color: #3a5a40; /* Un verde más oscuro */
+    color: #fefae0; /* Color de texto claro */
+    font-weight: bold; /* Texto en negrita para hacerlo más prominente */
+    font-size: 18px; /* Un tamaño de letra más grande */
+    border: none;
+    border-radius: 50px; /* Bordes redondeados para darle una apariencia suave */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1); /* Sombra sutil para darle profundidad */
+    transition: all 0.3s ease; /* Transición suave para todos los cambios */
+    cursor: pointer; 
+}
+
+.buy-product:hover {
+    background-color: #283618; /* Un color un poco más oscuro al pasar el mouse */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* Una sombra más oscura y más prominente al pasar el ratón por encima */
+    transform: translateY(-3px); /* Una pequeña elevación al pasar el ratón por encima */
+}
+
+.buy-product:active {
+    transform: translateY(2px); /* Presionar el botón un poco al hacer clic en él */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); /* Una sombra más pequeña al hacer clic en él */
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.popup-content {
+    width: 300px;
+    margin: 15% auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    position: relative;
+}
+
+.product-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 20vh;
+    padding-top: 20vh;
+}
+
+.product-image {
+    object-fit:contain;
+    border-radius: 8px;
+    width: 50%;
+    height: 50%;
+}
+
+.product-info {
+    max-width: 60%;
+}
+
+.carousel {
+    max-width: 100%;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.carousel-item {
+    display: none;
+    animation: fadeIn 1s ease-out;
+}
+
+.carousel-item.active {
+    display: block;
+}
+
+.product-title a {
+    text-decoration: none !important;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@media (max-width: 768px) {
+    .product-container {
+        flex-direction: column-reverse;
+        align-items: center;
+        padding: 20vh 5vh; /* Menos padding en móviles */
+    }
+
+    .product-info {
+        max-width: 100%; /* Utiliza todo el ancho disponible */
+        margin-bottom: 20px; /* Espacio antes de la imagen del curso */
+    }
+
+    .buy-product {
+        font-size: 16px; /* Ligeramente más pequeño en móviles */
+        padding: 2vh 8vh; /* Menos padding horizontal en móviles */
+        margin: 0 auto; /* Centrar en móviles */
+        display: block; /* Asegura que el botón sea un bloque para centrarlo */
+    }
+
+    .product-title {
+        text-align: center; /* Centrar el título */
+        margin-bottom: 20px; /* Espacio después del título */
+        text-decoration: none;
+    }
+
+    .carousel-item h2 {
+        font-size: 18px; /* Tamaño de fuente más grande para los subtítulos de la semana */
+    }
+
+    .carousel-item ul {
+        padding-left: 20px; /* Espacio interior para la lista */
+    }
+
+    .carousel-item li {
+        font-size: 16px; /* Tamaño de fuente más grande para los items */
+        line-height: 1.5; /* Espaciado de línea para mejorar la legibilidad */
+        margin-bottom: 10px; /* Espacio después de cada item */
+    }
+}
+
+.carousel-item {
+    animation: fadeInRight 0.5s ease-out forwards;
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.product-title {
+    font-weight: bold;
+    color: #606c38; /* Un color oscuro para darle prominencia */
+}
+
+.carousel-item li {
+    color: #283618; /* Un color que contraste pero no sea demasiado brillante */
+    list-style-type: none; /* Opcional: elimina los bullets de la lista */
+    position: relative;
+}
+
+.carousel-item li:before {
+    content: '•'; /* Añade un bullet personalizado */
+    color: #3a5a40; /* Color del bullet */
+    font-size: 24px; /* Tamaño del bullet */
+    line-height: 16px; /* Ajusta la línea del bullet para que se alinee bien */
+    position: absolute;
+    left: -1.5em; /* Posición del bullet a la izquierda */
+}

@@ -1,0 +1,83 @@
+---
+layout: default
+---
+<!-- Sobre Nosotros -->
+<section class="about-us-section">
+    <div class="about-us-text">
+        <h2 style="margin-bottom: 2vh;">{{ site.data.about.title }}</h2>
+        <p>{{ site.data.about.introduction }}</p>
+    </div>
+</section>
+
+<section class="content-section reveal-left">
+    <div class="lottie-container">
+    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
+    <dotlottie-player src="https://lottie.host/642ea62e-cef3-410d-8390-8effe8b3d8f2/a9851Z8vNA.json" background="transparent" speed="0.25" style="width: 80vh; height: 50vh;" loop autoplay>
+    </dotlottie-player>
+    </div>
+
+    <div class="info-content">
+        <h3 class="highlight-text">{{ site.data.about.sections[0].title }}</h3>
+        <p>{{ site.data.about.sections[0].content }}</p>
+
+        <h3 class="highlight-text">{{ site.data.about.sections[1].title }}</h3>
+        <p>{{ site.data.about.sections[1].content }}</p>
+
+        <ul class="features-list">
+            {% for item in site.data.about.sections[1].items %}
+            <li><span class="icon-container"><i class="fas fa-check"></i></span>{{ item }}</li>
+            {% endfor %}
+        </ul>
+
+        <h3 class="highlight-text">{{ site.data.about.sections[2].title }}</h3>
+        <p>{{ site.data.about.sections[2].content }}</p>
+    </div>
+</section>
+
+<section class="team-section reveal-bottom">
+    <div class="title-container">
+        <h2 class="title">TESTIMONIOS</h2>
+    </div>
+    <h3 class="subtitle">¿QUÉ DICEN NUESTROS CLIENTES?</h3>
+
+    <!-- Carrusel de Testimonios -->
+    <div class="carousel-container">
+        <div class="carousel-wrapper">
+            <img src="{{ site.baseurl }}/assets/img/testimonials/tceo.jpeg" alt="Saul Goodman" class="carousel-image">
+            <div class="carousel-slide">
+                <div class="carousel-content">
+                    <h3>Saul Goodman</h3>
+                    <p class="position">CEO & Founder</p>
+                    <blockquote>{{ site.data.about.testimonials[0].text }}</blockquote>
+                </div>
+            </div>
+            <img src="{{ site.baseurl }}/assets/img/testimonials/t1.jpeg" alt="Sara Willson" class="carousel-image">
+            <div class="carousel-slide">
+                <div class="carousel-content">
+                    <h3>Sara Willson</h3>
+                    <p class="position">Aspiring Engineer</p>
+                    <blockquote>{{ site.data.about.testimonials[1].text }}</blockquote>
+                </div>
+            </div>
+            <img src="{{ site.baseurl }}/assets/img/testimonials/t2.jpeg" alt="Jose Gonzalez" class="carousel-image">
+            <div class="carousel-slide">
+                <div class="carousel-content">
+                    <h3>Jose Gonzalez</h3>
+                    <p class="position">Freelancer</p>
+                    <blockquote>{{ site.data.about.testimonials[2].text }}</blockquote>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-dots">
+            <!-- Se generarán los puntos aquí con JS -->
+        </div>
+    </div>
+    <div class="carousel-indicators">
+        <span class="indicator active"></span>
+        <span class="indicator"></span>
+        <span class="indicator"></span>
+        <span class="indicator"></span>
+    </div>
+    
+    <script src="{{ site.baseurl }}/assets/js/carrousel.js"></script>
+</section>

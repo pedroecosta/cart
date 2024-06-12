@@ -1,0 +1,48 @@
+<footer class="site-footer">
+    <div class="footer-content">
+        <div class="footer-brand">
+            <h2>{{ site.data.footer.brand.name }}</h2>
+            <p>{{ site.data.footer.brand.address }}</p>
+            <p>{{ site.data.footer.brand.phone }}</p>
+            <p style="margin-bottom: 2vh;">{{ site.data.footer.brand.email }}</p>
+
+            {% for social in site.data.footer.brand.social %}
+            <a href="{{ social.url }}" target="_blank" aria-label="{{ social.platform }}"><i class="{{ social.icon }}"></i></a>
+            {% endfor %}
+        </div>
+
+        <div class="footer-nav">
+            <h4>Sections</h4>
+            <ul>
+                {% for section in site.data.footer.navigation.sections %}
+                <li><a href="{{ section.url }}"><span class="arrow">></span> {{ section.title }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div class="footer-legal">
+            <h4>Legal</h4>
+            <ul>
+                {% for item in site.data.footer.legal %}
+                <li><a href="{{ item.url }}"><span class="arrow">></span> {{ item.title }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div class="footer-payment footer-icons-payment">
+            <h4>{{ site.data.footer.payments.title }}</h4>
+            {% for method in site.data.footer.payments.methods %}
+            <i class="{{ method.icon }}"></i>
+            {% endfor %}
+        </div>
+    </div>
+
+    <hr class="footer-divider">
+
+    <div class="footer-bottom">
+        <footer>
+            {{ site.data.footer.copyright | replace: ".", site.title }}
+          </footer>
+        <button class="scroll-top">{{ site.data.footer.scroll_top_button }}</button>
+    </div>
+</footer>

@@ -1,0 +1,47 @@
+.customer-message {
+    max-width: 800px; /* Ajusta según necesidades */
+    margin: 0 auto; /* Centra el mensaje si es menor que el ancho de la ventana */
+    padding: 20px; /* Espaciado alrededor del mensaje */
+    line-height: 1.5; /* Espacio entre líneas para mejorar la lectura */
+}
+
+.customer-message h2 {
+    font-weight: 400; /* Normal weight for headings */
+    margin-bottom: 20px; /* Espacio debajo del encabezado */
+}
+
+.customer-message p {
+    margin-bottom: 20px;
+    font-weight: lighter;
+}
+
+.customer-message ul {
+    list-style-type: square; /* Estilo de viñetas */
+    margin-left: 20px; /* Indentación para la lista */
+}
+
+.customer-message ul li {
+    margin-bottom: 15px; /* Espacio entre elementos de la lista */
+}
+
+.customer-message a {
+    color: #007BFF; /* Color de los enlaces. Ajusta según necesidades */
+    text-decoration: none; /* Elimina el subrayado del enlace */
+}
+
+.customer-message a:hover {
+    text-decoration: underline; /* Subraya al pasar el mouse */
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 480px) {
+    .customer-message {
+        font-size: 16px; /* Ajusta el tamaño de la fuente para móviles */
+        padding: 10px;
+    }
+
+    .title-container h2{
+        font-size: 2rem !important;
+        margin-top: 2vh;
+    }
+}

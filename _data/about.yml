@@ -1,0 +1,26 @@
+title: Sobre Nosotros
+introduction: "En nuestro growshop, nos apasiona el cultivo y el cuidado de las plantas. Ofrecemos productos de alta calidad y asesoramiento experto para ayudar a nuestros clientes a obtener los mejores resultados en sus cultivos. Ya sea que estés comenzando o seas un cultivador experimentado, estamos aquí para apoyarte en cada paso del camino."
+sections:
+  - title: Nuestra Visión
+    content: "Nuestra visión es empoderarte con contenido educativo de vanguardia que te ayude a dominar nuevas habilidades y dar forma al futuro del cultivo."
+  - title: Cursos
+    content: "Ofrecemos una variedad de cursos en diferentes dominios, dirigidos por instructores expertos que están ansiosos por compartir sus conocimientos contigo."
+    items:
+      - "Práctico"
+      - "Práctico y divertido"
+      - "Aumenta tus ingresos"
+  - title: Comunidad
+    content: "Al inscribirte en nuestros cursos, desbloquearás nuevas oportunidades y expandirás tus horizontes en el ámbito del cultivo. Únete a nuestra comunidad de individuos que están abrazando el futuro del cultivo y tomando el control de su aprendizaje. Descubre tu potencial con nuestro growshop y embárcate en el camino hacia el éxito."
+testimonials:
+  - name: Saul Goodman
+    position: CEO & Founder
+    image: "/assets/img/testimonials/tceo.jpeg"
+    text: "After taking the Rust Blockchain Development course, I gained practical knowledge and experience in building decentralized applications on Near Protocol and Solana. This course deepened my understanding of blockchain fundamentals, smart contract development, and real-world use cases. With hands-on projects and guidance, I honed my Rust programming skills and learned to create secure and scalable blockchain solutions."
+  - name: Sara Willson
+    position: Aspiring Engineer
+    image: "/assets/img/testimonials/t1.jpeg"
+    text: "The Solidity Programming course gave me a strong foundation in writing smart contracts and developing decentralized applications on Ethereum. The course provided comprehensive content, practical examples, and interactive projects that helped me grasp Solidity concepts quickly. With a focus on real-world applications, I gained the skills needed to create secure and efficient smart contracts. I recommend this course to anyone looking to enter the world of blockchain development with Solidity."
+  - name: Jose Gonzalez
+    position: Freelancer
+    image: "/assets/img/testimonials/t2.jpeg"
+    text: "So, I just finished the Solidity Programming course, and let me tell you, it's a game-changer! I learned how to write smart contracts like a pro and build awesome decentralized apps on Ethereum. The course was super engaging, with hands-on projects and real-life examples that made learning Solidity a breeze. Now I can create secure and efficient smart contracts that can change the world (or at least the blockchain world). If you're into blockchain development, this course is a must-try. Trust me, you won't be disappointed!"

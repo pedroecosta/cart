@@ -1,0 +1,26 @@
+refund_policy:
+  title: Política de Reembolsos
+  introduction: "Bienvenido a **Gorilla's Grow**, estamos dedicados a ofrecer productos de alta calidad para el cultivo. Queremos asegurarnos de que nuestros clientes estén completamente satisfechos con su compra. A continuación, presentamos nuestra política de devoluciones, reembolsos y entregas:"
+  sections:
+    - title: Devoluciones
+      content: |
+        Si el producto no cumple con sus expectativas o no está satisfecho con su compra, puede solicitar un reembolso del 100% del producto.
+
+        La solicitud de devolución debe enviarse a la dirección de correo electrónico support@greengrow.com.
+
+        Si detectamos algún uso malicioso, robo de tarjetas de crédito u otro uso indebido de la información de pago, se emitirá un reembolso completo.
+
+        En caso de insatisfacción, se procesará una devolución sin ningún problema.
+
+        En todos los demás casos, se emitirá un reembolso parcial dentro de los 7 días posteriores a la compra, excepto para productos perecederos, que no son elegibles para devoluciones. Para herramientas y equipos, ofrecemos un reembolso del 100% dentro de los primeros 30 días.
+    - title: Reembolsos
+      content: |
+        Si se determina que un reembolso es la mejor solución, se emitirá a través del mismo método de pago utilizado para la compra. El reembolso se procesará dentro de los 5 días hábiles posteriores a la solicitud de devolución.
+    - title: Entregas
+      content: |
+        La entrega de nuestros productos se realiza a través de servicios de mensajería. Todos los productos se entregan físicamente en la dirección proporcionada en el momento de la compra.
+    - title: Contacto
+      content: |
+        En caso de cualquier problema o consulta, por favor contáctenos por correo electrónico a support@greengrow.com o a través de WhatsApp al siguiente número: +54 11 1234 5678.
+
+        Agradecemos su confianza en **Gorilla's Grow** y esperamos que nuestros productos cumplan con sus necesidades.

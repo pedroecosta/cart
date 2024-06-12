@@ -1,0 +1,39 @@
+---
+layout: default
+---
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/styles/terms.css">
+<style>
+    h3 {
+        font-size: 2rem;
+        font-weight: lighter;
+    }
+
+    p {
+        margin-top: 2vh;
+        font-size: 1.2rem;
+    }
+</style>
+<section class="about-us-section">
+    <div class="about-us-text">
+        <h2 style="margin-bottom: 2vh;">{{ site.data.warranty.warranty_terms.title }}</h2>
+    </div>
+</section>
+<section class="team-section reveal-bottom">
+    <div class="title-container">
+        <h2 class="title">{{ site.data.warranty.warranty_terms.title }}</h2>
+    </div>
+</section>
+<div class="customer-message">
+    <h3>{{ site.data.warranty.warranty_terms.title }}</h3>
+    <p>{{ site.data.warranty.warranty_terms.introduction }}</p>
+    <p>{{ site.data.warranty.warranty_terms.content }}</p>
+    <ul>
+        {% for guarantee in site.data.warranty.warranty_terms.guarantees %}
+            <li>
+                <strong>{{ guarantee.title }}:</strong> {{ guarantee.description }}
+            </li>
+        {% endfor %}
+    </ul>
+    <p>{{ site.data.warranty.warranty_terms.contact }}</p>
+    <p>{{ site.data.warranty.warranty_terms.closing }}</p>
+</div>

@@ -1,0 +1,40 @@
+---
+layout: default
+---
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/styles/terms.css">
+<style>
+    h3 {
+        font-size: 2rem;
+        font-weight: lighter;
+    }
+
+    p {
+        margin-top: 2vh;
+        font-size: 1.2rem;
+    }
+</style>
+<section class="about-us-section">
+    <div class="about-us-text">
+        <h2 style="margin-bottom: 2vh;">{{ site.data.policy.privacy_policy.title }}</h2>
+    </div>
+</section>
+<section class="team-section reveal-bottom">
+    <div class="title-container">
+        <h2 class="title">{{ site.data.policy.privacy_policy.title }}</h2>
+    </div>
+</section>
+<div class="customer-message">
+    <h3>{{ site.data.policy.privacy_policy.title }}</h3>
+    <p>{{ site.data.policy.privacy_policy.introduction }}</p>
+    {% for section in site.data.policy.privacy_policy.sections %}
+        <h3>{{ section.title }}</h3>
+        <p>{{ section.content }}</p>
+        {% if section.items %}
+            <ul>
+                {% for item in section.items %}
+                    <li>{{ item }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endfor %}
+</div>

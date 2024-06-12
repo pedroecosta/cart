@@ -1,0 +1,214 @@
+/* About Us section */
+.about-us-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3vh;
+    background-color: var(--greengrow-background);
+}
+
+.about-us-text {
+    flex: 60%;
+    padding: 3vh;
+    color: var(--greengrow-verde-50);
+    margin-top: 12vh;
+    text-align: center;
+}
+
+.about-us-image {
+    flex: 40%;
+    padding: 3vh;
+}
+
+/* Testimonial Cards */
+.carousel-container {
+    margin-left: -20vh;
+    margin-top: 4vh;
+    width: 80%;
+    overflow: visible;
+    position: relative;
+}
+
+.carousel-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+    flex: 0 0 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--greengrow-verde-100);
+    background-color: var(--greengrow-verde-50);
+}
+
+.carousel-image {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+    object-fit: cover;
+    position: relative;
+    z-index: 10;
+    top: 4vh;
+    left: 8vh;
+}
+
+.carousel-content {
+    overflow: visible;
+    flex: 1;
+    margin-left: 6vh;
+}
+
+.position {
+    font-style: italic;
+}
+
+blockquote {
+    background-color: var(--greengrow-verde-50);
+    padding: 15px;
+    border-left: 5px solid var(--greengrow-amarillo-400);
+    position: relative;
+}
+
+blockquote::before, blockquote::after {
+    content: '"';
+    font-size: 24px;
+    color: var(--greengrow-amarillo-400);
+}
+
+blockquote::before {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+blockquote::after {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+}
+
+.carousel-dots {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.carousel-dots .dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin: 0 5px;
+    background-color: var(--greengrow-verde-100);
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+.carousel-dots .dot.active {
+    background-color: var(--greengrow-amarillo-400);
+}
+
+/* Estilos generales para mobile */
+@media only screen and (max-width: 768px) {
+    .about-us-section {
+        flex-direction: column;
+    }
+
+    .about-us-text, .about-us-image {
+        flex: 100%;
+        padding: 2vh;
+    }
+
+    .carousel-container {
+        margin: 0 0;
+        overflow: hidden;
+        width: 90%;
+    }
+    
+    .carousel-wrapper {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+        margin-left: -8vh;
+    }
+    
+    .carousel-slide {
+        min-width: 100%;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 1px solid var(--greengrow-verde-100);
+        background-color: var(--greengrow-verde-50);
+    }
+
+    .team-section {
+        padding: 0px;
+    }
+
+    .team-section h2 {
+        padding: 20px;
+        margin-bottom: -20px;
+    }
+
+    .team-section h3 {
+        margin-bottom: 20px;
+    }
+    
+    .carousel-image {
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+    }
+
+    blockquote {
+        width: 100%;
+        box-sizing: border-box;
+        position: relative;
+        max-width: 70%;
+    }
+    
+    blockquote::before, blockquote::after {
+        content: '"';
+        position: absolute;
+        font-size: 2em;
+        opacity: 0.2;
+    }
+    
+    blockquote::before {
+        top: 5px;
+        left: 5px;
+    }
+    
+    blockquote::after {
+        bottom: 5px;
+        right: 5px;
+    }
+}
+
+/* Si deseas realizar ajustes específicos para pantallas aún más pequeñas (como smartphones), puedes agregar otra media query: */
+@media only screen and (max-width: 480px) {
+    .carousel-container {
+        width: 95%;
+    }
+
+    .carousel-image {
+        width: 80px;
+        height: 80px;
+    }
+
+    .carousel-content h3 {
+        font-size: 1.2em;
+    }
+
+    .carousel-content .position {
+        font-size: 0.9em;
+    }
+
+    blockquote {
+        font-size: 0.9em;
+        padding: 10px;
+    }
+}

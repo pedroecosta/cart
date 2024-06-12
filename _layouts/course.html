@@ -1,0 +1,26 @@
+---
+layout: default
+---
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/styles/productsSection.css">
+<section class="product-container">
+    <div class="product-info">
+        <h1 class="product-title">{{ page.title }}</h1>
+        <div id="product-carousel" class="carousel">
+            {% for week in page.weeks %}
+            <div class="carousel-item">
+                <h2 style="margin-bottom: 2vh;">Week {{ forloop.index }}: {{ week.title }}</h2>
+                <ul>
+                    {% for item in week.items %}
+                    <li>{{ item }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endfor %}
+        </div>
+        <button onclick="location.href='{{ site.baseurl }}/contact';" class="buy-product">Buy Now</button>
+    </div>
+    <div class="product-image">
+        <img src="{{ page.image }}" alt="Imagen del curso" />
+    </div>
+</section>
+<script src="{{ site.baseurl }}/assets/js/productCarousel.js"></script>

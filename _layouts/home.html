@@ -1,0 +1,79 @@
+---
+layout: default
+---
+{% include banner.html %}
+<section class="content-section reveal-left">
+    <div class="lottie-container">
+        <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
+
+    <dotlottie-player src="https://lottie.host/46bd6dcd-9a21-4cb8-a6de-198f9de21d3d/s7t3Tea2mr.json" background="transparent" speed="1" style="width: 80vh; height: 80vh;" loop autoplay></dotlottie-player>
+    </div>
+
+    <div class="info-content">
+        <h3 class="highlight-text">{{ site.data.info.highlight_text }}</h3>
+        <p>{{ site.data.info.description }}</p>
+    
+        <ul class="features-list">
+            {% for feature in site.data.info.features %}
+            <li><span class="icon-container"><i class="fas fa-check"></i></span> {{ feature | safe }}</li>
+            {% endfor %}
+        </ul>
+    
+        <p>{{ site.data.info.additional_text }}</p>
+    </div>
+    
+    
+</section>
+{% include productsSections.html %}
+<section class="choose-us-section reveal-right" id="started">
+    <h1 class="typing-title">{{ site.data.choose_us.title }}<span class="typing"></span></h1>
+    <p style="margin-bottom: 8vh; font-size: 1.2rem; letter-spacing: 0.15rem;">{{ site.data.choose_us.subtitle }}</p>
+    <div class="cards-container">
+        {% for card in site.data.choose_us.cards %}
+        <div class="card {% if forloop.first %}dark-card{% endif %}">
+            <div class="card-icon"><i class="{{ card.icon }}"></i></div>
+            <h4 style="font-size: 1.5rem;">{{ card.title }}</h4>
+            <p>{{ card.description }}</p>
+            {% if card.button_text %}
+            <br><br><br><br>
+            <a href="#" class="learn-more-btn">{{ card.button_text }}</a>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+</section>
+<section class="team-section reveal-bottom", style="display: none;">
+    <div class="title-container">
+        <h2 class="title">OUR TEAM</h2>
+    </div>
+    <h3 class="subtitle">WORK WITH LOVE FOR YOU</h3>
+
+
+    <div class="team-cards">
+        <div class="team-card">
+            <img src="{{ site.baseurl }}/assets/img/pp1.jpeg" alt="Christopher Evans" class="team-image">
+            <h3 class="member-name">Christopher Evans</h3>
+            <p class="member-role">Business & Administration</p>
+            <p class="member-desc">Oversees all aspects of operations and ensures efficient management for
+                sustainable growth and success in our QA and programming courses.</p>
+        </div>
+
+        <div class="team-card">
+            <img src="{{ site.baseurl }}/assets/img/pp2.jpeg" alt="Sarah Johnson" class="team-image">
+            <h3 class="member-name">Sarah Johnson</h3>
+            <p class="member-role">Marketing Specialist</p>
+            <p class="member-desc">Strategic mastermind. In charge of campaigns to drive growth, brand exposure,
+                and
+                student engagement for our tech courses.</p>
+        </div>
+
+        <div class="team-card">
+            <img src="{{ site.baseurl }}/assets/img/pp3.jpeg" alt="James Anderson" class="team-image">
+            <h3 class="member-name">James Anderson</h3>
+            <p class="member-role">Web Development & QA</p>
+            <p class="member-desc">Web3, blockchain, and QA expert. Lead engineering and course supervisor,
+                ensuring
+                quality content and modern coding practices.</p>
+        </div>
+    </div>
+</section>

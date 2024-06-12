@@ -1,0 +1,114 @@
+---
+layout: default
+---
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/styles/productsSection.css">
+<style>
+    .btn-icon {
+        background-color: #f0f0f0; /* Color de fondo */
+        border: none; /* Sin borde */
+        cursor: pointer; /* Cursor en forma de mano */
+        font-size: 16px; /* Tamaño del texto/icono */
+        padding: 10px; /* Espaciado interno */
+        border-radius: 5px; /* Bordes redondeados */
+    }
+
+    .btn-icon i {
+        color: #333; /* Color del icono */
+        font-size: 20px; /* Tamaño del icono */
+    }
+</style>
+<section class="about-us-section">
+    <div class="about-us-text">
+        <h2 style="margin-bottom: 2vh;">Sobre Nosotros</h2>
+        <p>En nuestro growshop, nos apasiona el cultivo y el cuidado de las plantas. Ofrecemos productos de alta calidad y asesoramiento experto para ayudar a nuestros clientes a obtener los mejores resultados en sus cultivos. Ya sea que estés comenzando o seas un cultivador experimentado, estamos aquí para apoyarte en cada paso del camino.</p>
+    </div>
+</section>
+
+<section class="products-section" style="background: white;" id="products">
+    {% for category in site.data.products %}
+    <hr class="divider" style="color: black;">
+    <div class="category-container">
+        <h2 class="category-title">{{ category.category }}</h2>
+        <div class="product-cards">
+            {% for product in category.products %}
+            <div class="product-card" data-title="{{ product.title }}">
+                <img src="{{ product.image }}" alt="{{ product.title }}" class="product-image">
+                <span class="product-label">{{ product.label }}</span>
+                <span class="product-price">$ {{ product.price | number_format }}</span>
+                <h5 class="product-title"><a href="{{ site.baseurl }}/products/{{ product.slug }}">{{ product.title }}</a></h5>
+                <p class="product-desc">{{ product.description }}</p>
+                <hr class="product-divider">
+                <div class="product-footer">
+                    <button class="buy-product">Buy Now</button>
+                    <button onclick="addToCart('{{ product.title }}', '{{ product.price }}', '{{ category.category }}')" class="btn-icon">
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <span style="color: #333;" id="quantity-{{ product.title }}">0</span>
+                    <button onclick="removeFromCart('{{ product.title }}')" class="btn-icon">
+                        <i class="fas fa-minus"></i>
+                    </button>
+                    <button onclick="deleteFromCart('{{ product.title }}')" class="btn-icon">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% endfor %}
+</section>
+
+<!-- Login Pop-up -->
+<div id="loginPopup" class="popup">
+    <div class="popup-content">
+        <span class="close-popup">&times;</span>
+        <h2>Login</h2>
+        <form>
+            <input type="text" placeholder="Username/Email" required>
+            <input type="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+</div>
+<!-- Invalid Credentials Pop-up -->
+<div id="invalidPopup" class="popup">
+    <div class="popup-content">
+        <span class="close-popup-invalid">&times;</span>
+        <h2>Error</h2>
+        <p>Credenciales incorrectas. Por favor, inténtalo de nuevo.</p>
+    </div>
+</div>
+
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<script src="{{ site.baseurl }}/assets/js/products.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const query = urlParams.get('query').toLowerCase();
+
+    // Selecciona todos los contenedores de categorías
+    const categoryContainers = document.querySelectorAll('.category-container');
+
+    categoryContainers.forEach(function(container) {
+        // Inicialmente, asume que no hay productos visibles en esta categoría
+        let hasVisibleProducts = false;
+
+        // Selecciona todas las tarjetas de productos dentro del contenedor actual
+        const products = container.querySelectorAll('.product-card');
+
+        products.forEach(function(product) {
+            const title = product.getAttribute('data-title').toLowerCase();
+            if (!title.includes(query)) {
+                product.style.display = 'none'; // Oculta los productos que no coinciden
+            } else {
+                hasVisibleProducts = true; // Encuentra al menos un producto visible
+            }
+        });
+
+        // Si no hay productos visibles, oculta todo el contenedor de la categoría
+        if (!hasVisibleProducts) {
+            container.style.display = 'none';
+        }
+    });
+});
+</script>
