@@ -24,7 +24,7 @@
             <h4>Legal</h4>
             <ul>
                 {% for item in site.data.footer.legal %}
-                <li><a href="{{ item.url }}"><span class="arrow">></span> {{ item.title }}</a></li>
+                <li><a href="{{ site.baseurl }}{{ item.url }}"><span class="arrow">></span> {{ item.title }}</a></li>
                 {% endfor %}
             </ul>
         </div>
