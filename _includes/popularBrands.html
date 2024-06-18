@@ -1,0 +1,88 @@
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/styles/productsSection.css">
+<style>
+    .btn-icon {
+        background-color: #f0f0f0;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .btn-icon i {
+        color: #333;
+        font-size: 20px;
+    }
+
+    .brand-card {
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin: 10px;
+        cursor: pointer;
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .brand-card img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .brand-name {
+        margin-top: 10px;
+        font-size: 1.2em;
+        font-weight: bold;
+    }
+
+    .brands-section {
+        width: 100%;
+        padding: 2em;
+        box-sizing: border-box;
+        display: grid;
+        grid-template-columns: repeat(4, minmax(150px, 1fr));
+        gap: 2em;
+        background: var(--greengrow-verde-700);
+        color: var(--greengrow-amarillo-50);
+    }
+
+    @media screen and (max-width: 768px) {
+        .brands-section {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1em;
+        }
+
+        .brand-card {
+            padding: 10px;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .brand-card img {
+            height: 100px;
+        }
+    }
+</style>
+
+<section class="brands-section" id="popular-brands">
+    <div class="title-container">
+        <h2 class="title">MARCAS</h2>
+        <hr class="divider">
+        <h2 class="subtitle">MARCAS POPULARES</h2>
+    </div>
+
+    <div class="brand-cards">
+        {% assign brands = site.data.products | map: 'products' | flat_map: 'it' | map: 'brand' | uniq %}
+        {% for brand in brands limit: 4 %}
+            {% assign brand_products = site.data.products | map: 'products' | flat_map: 'it' | where: 'brand', brand %}
+            {% assign brand_image = brand_products | first | map: 'brand_image' %}
+            <a href="{{ site.baseurl }}/products?query={{ brand }}" class="brand-card">
+                <img src="{{ brand_image }}" alt="{{ brand }} Logo">
+                <div class="brand-name">{{ brand }}</div>
+            </a>
+        {% endfor %}
+    </div>
+</section>

@@ -1,40 +1,36 @@
 - category: "Growshop"
   products:
-    - image: //acdn.mitiendanube.com/stores/002/858/188/products/photoroom-20230528_1658121-050d7d06d5ed5e909816853054931867-1024-1024.webp
+    - image: "https://acdn.mitiendanube.com/stores/002/858/188/products/photoroom-20230528_1658121-050d7d06d5ed5e909816853054931867-1024-1024.webp"
       label: Producto
-      price: 2603,00
+      price: 2603.00
       title: NAMASTE BIO NEEM 30ML - BION3
       slug: namaste-bio-neem-30ml-bion3
       description: Es un aceite 100% Natural proveniente de India, que tiene la función de prevenir y controlar primeros estadios de infección de varios tipos de plagas y hongo.
-    - image: //acdn.mitiendanube.com/stores/002/858/188/products/photoroom-20230528_1655241-f0f33ac1314c17fb4f16853054878001-1024-1024.webp
+      brand: Namaste
+      brand_image: "https://acdn.mitiendanube.com/stores/002/858/188/products/photoroom-20230528_1658121-050d7d06d5ed5e909816853054931867-1024-1024.webp"
+    - image: "https://acdn.mitiendanube.com/stores/002/858/188/products/photoroom-20230528_1655241-f0f33ac1314c17fb4f16853054878001-1024-1024.webp"
       label: Producto
-      price: 3367,00
+      price: 3367.00
       title: NAMASTE BIO PROTECT 100ML - BIOP10
       slug: namaste-bio-protect-100ml-biop10
       description: Antifúngico 100% Natural a base de extractos de Cola de caballo y de Ortiga Verde, que aporta vitalidad y fuerza a las plantas.
-    - image: //acdn.mitiendanube.com/stores/002/858/188/products/photoroom-20230528_1655241-f0f33ac1314c17fb4f16853054878001-1024-1024.webp
-      label: Producto
-      price: 3367,00
-      title: NAMASTE BIO PROTECT 100ML - BIOP10
-      slug: namaste-bio-protect-100ml-biop10
-      description: Antifúngico 100% Natural a base de extractos de Cola de caballo y de Ortiga Verde, que aporta vitalidad y fuerza a las plantas.
+      brand: Namaste
+      brand_image: "https://acdn.mitiendanube.com/stores/002/858/188/products/photoroom-20230528_1658121-050d7d06d5ed5e909816853054931867-1024-1024.webp"
 - category: "LED"
   products:
-    - image: cart/assets/img/led.png
+    - image: "https://images.unsplash.com/photo-1581235720704-06d3acfcb36f?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
       label: Producto
-      price: 500,00
+      price: 500.00
       title: LED Grow Light 300W
       slug: led-grow-light-300w
       description: High-efficiency LED grow light for indoor plants.
-    - image: cart/assets/img/led.png
+      brand: Generic
+      brand_image: "https://images.unsplash.com/photo-1581235720704-06d3acfcb36f?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    - image: "https://images.unsplash.com/photo-1581235720704-06d3acfcb36f?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
       label: Producto
-      price: 700,00
+      price: 700.00
       title: LED Grow Light 500W
       slug: led-grow-light-500w
       description: Powerful 500W LED grow light for optimal plant growth.
-    - image: cart/assets/img/led.png
-      label: Producto
-      price: 700,00
-      title: LED Grow Light 500W
-      slug: led-grow-light-500w
-      description: Powerful 500W LED grow light for optimal plant growth.
+      brand: Generic
+      brand_image: "https://images.unsplash.com/photo-1581235720704-06d3acfcb36f?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"

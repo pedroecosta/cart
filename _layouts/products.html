@@ -4,17 +4,30 @@ layout: default
 <link rel="stylesheet" href="{{ site.baseurl }}/assets/styles/productsSection.css">
 <style>
     .btn-icon {
-        background-color: #f0f0f0; /* Color de fondo */
-        border: none; /* Sin borde */
-        cursor: pointer; /* Cursor en forma de mano */
-        font-size: 16px; /* Tamaño del texto/icono */
-        padding: 10px; /* Espaciado interno */
-        border-radius: 5px; /* Bordes redondeados */
+        background-color: #f0f0f0;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        padding: 10px;
+        border-radius: 5px;
     }
 
     .btn-icon i {
-        color: #333; /* Color del icono */
-        font-size: 20px; /* Tamaño del icono */
+        color: #333;
+        font-size: 20px;
+    }
+
+    .brand-image {
+        width: 50px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .brand-name {
+        text-align: center;
+        font-weight: bold;
+        margin-top: 10px;
     }
 </style>
 <section class="about-us-section">
@@ -31,12 +44,14 @@ layout: default
         <h2 class="category-title">{{ category.category }}</h2>
         <div class="product-cards">
             {% for product in category.products %}
-            <div class="product-card" data-title="{{ product.title }}">
+            <div class="product-card" data-title="{{ product.title }}" data-brand="{{ product.brand }}">
                 <img src="{{ product.image }}" alt="{{ product.title }}" class="product-image">
                 <span class="product-label">{{ product.label }}</span>
                 <span class="product-price">$ {{ product.price | number_format }}</span>
                 <h5 class="product-title"><a href="{{ site.baseurl }}/products/{{ product.slug }}">{{ product.title }}</a></h5>
                 <p class="product-desc">{{ product.description }}</p>
+                <img src="{{ product.brand_image }}" alt="{{ product.brand }} Logo" class="brand-image">
+                <div class="brand-name">{{ product.brand }}</div>
                 <hr class="product-divider">
                 <div class="product-footer">
                     <button class="buy-product">Buy Now</button>
@@ -57,58 +72,36 @@ layout: default
     </div>
     {% endfor %}
 </section>
-
-<!-- Login Pop-up -->
-<div id="loginPopup" class="popup">
-    <div class="popup-content">
-        <span class="close-popup">&times;</span>
-        <h2>Login</h2>
-        <form>
-            <input type="text" placeholder="Username/Email" required>
-            <input type="password" placeholder="Password" required>
-            <button type="submit">Login</button>
-        </form>
-    </div>
-</div>
-<!-- Invalid Credentials Pop-up -->
-<div id="invalidPopup" class="popup">
-    <div class="popup-content">
-        <span class="close-popup-invalid">&times;</span>
-        <h2>Error</h2>
-        <p>Credenciales incorrectas. Por favor, inténtalo de nuevo.</p>
-    </div>
-</div>
-
-<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-<script src="{{ site.baseurl }}/assets/js/products.js"></script>
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-    const urlParams = new URLSearchParams(window.location.search);
-    const query = urlParams.get('query').toLowerCase();
-
-    // Selecciona todos los contenedores de categorías
-    const categoryContainers = document.querySelectorAll('.category-container');
-
-    categoryContainers.forEach(function(container) {
-        // Inicialmente, asume que no hay productos visibles en esta categoría
-        let hasVisibleProducts = false;
-
-        // Selecciona todas las tarjetas de productos dentro del contenedor actual
-        const products = container.querySelectorAll('.product-card');
-
-        products.forEach(function(product) {
-            const title = product.getAttribute('data-title').toLowerCase();
-            if (!title.includes(query)) {
-                product.style.display = 'none'; // Oculta los productos que no coinciden
-            } else {
-                hasVisibleProducts = true; // Encuentra al menos un producto visible
+    document.addEventListener('DOMContentLoaded', function() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const query = urlParams.get('query') ? urlParams.get('query').toLowerCase() : '';
+    
+        // Selecciona todos los contenedores de categorías
+        const categoryContainers = document.querySelectorAll('.category-container');
+    
+        categoryContainers.forEach(function(container) {
+            // Inicialmente, asume que no hay productos visibles en esta categoría
+            let hasVisibleProducts = false;
+    
+            // Selecciona todas las tarjetas de productos dentro del contenedor actual
+            const products = container.querySelectorAll('.product-card');
+    
+            products.forEach(function(product) {
+                const title = product.getAttribute('data-title').toLowerCase();
+                const brand = product.getAttribute('data-brand').toLowerCase();
+                if (title.includes(query) || brand.includes(query)) {
+                    product.style.display = 'block'; // Muestra los productos que coinciden
+                    hasVisibleProducts = true; // Encuentra al menos un producto visible
+                } else {
+                    product.style.display = 'none'; // Oculta los productos que no coinciden
+                }
+            });
+    
+            // Si no hay productos visibles, oculta todo el contenedor de la categoría
+            if (!hasVisibleProducts) {
+                container.style.display = 'none';
             }
         });
-
-        // Si no hay productos visibles, oculta todo el contenedor de la categoría
-        if (!hasVisibleProducts) {
-            container.style.display = 'none';
-        }
     });
-});
-</script>
+</script>    
