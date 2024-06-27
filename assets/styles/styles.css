@@ -196,7 +196,6 @@ nav.transparent-bg {
     .logo-img {
         width: 10vh;
         height: 10vh;
-        margin-left: 18vh;
     }
 
     .container {
@@ -223,10 +222,6 @@ nav.transparent-bg {
     .menu-toggle {
         display: flex;
         margin: 6vh;
-    }
-
-    #brand-logo {
-        display: none;
     }
 
     .navbar-menu {

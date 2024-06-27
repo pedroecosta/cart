@@ -137,6 +137,12 @@ function updateQuantities() {
     });
 }
 
+function emptyCart() {
+    localStorage.setItem('cart', JSON.stringify([])); // Vacía el carrito completamente
+    updateCartCount(); // Actualiza el contador del carrito
+    updateCart(); // Actualiza el contenido del carrito
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     updateCartCount();
     updateQuantities();
