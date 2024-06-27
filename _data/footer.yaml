@@ -1,21 +1,12 @@
 brand:
   name: "Gorilla's Grow"
-  address: "123 Green Street, Buenos Aires, Argentina"
-  phone: "+54 11 1234 5678"
-  email: "support@greengrow.com"
+  address: "Alcorta 470, Claypole, Alte. Brown"
+  phone: "+54 11 21556617"
+  email: "No mail"
   social:
-    - platform: "Facebook"
-      url: "https://www.facebook.com/greengrowshop"
-      icon: "fab fa-facebook-f"
     - platform: "Instagram"
-      url: "https://www.instagram.com/greengrowshop"
+      url: "https://www.instagram.com/gorillas_viverogrow"
       icon: "fab fa-instagram"
-    - platform: "LinkedIn"
-      url: "https://www.linkedin.com/in/greengrowshop"
-      icon: "fab fa-linkedin-in"
-    - platform: "Github"
-      url: "https://github.com/greengrowshop"
-      icon: "fab fa-github"
 navigation:
   sections:
     - title: "Inicio"
@@ -36,11 +27,7 @@ legal:
 payments:
   title: "Pagos Seguros"
   methods:
-    - platform: "Visa"
-      icon: "fab fa-cc-visa"
-    - platform: "Mastercard"
-      icon: "fab fa-cc-mastercard"
-    - platform: "PayPal"
+    - platform: "Efectivo "
       icon: "fab fa-paypal"
     - platform: "MercadoPago"
       icon: "fas fa-money-check-alt"
