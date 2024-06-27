@@ -2,11 +2,11 @@ title: Contáctenos
 introduction: "¿Tienes alguna pregunta?\nEnvíanos un correo electrónico, nuestro equipo responderá dentro de las 24 horas."
 details:
   - icon: "fas fa-envelope"
-    text: "support@greengrow.com"
+    text: "no hay mail"
   - icon: "fas fa-phone"
-    text: "+54 11 1234 5678"
+    text: "011 1121556617"
   - icon: "fas fa-map-marker-alt"
-    text: "123 Green Street, Buenos Aires, Argentina"
+    text: "Alcorta 470, Claypole, Alte. Brown"
 form:
   action: "https://formspree.io/f/mjvqyrgz"
   fields:
